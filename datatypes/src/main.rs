@@ -2,7 +2,8 @@ fn main() {
     // _basics_and_print_formatting();
     // _numbers_and_arithmetic();
     // _binary_operations();
-    _booleans();
+    // _booleans();
+    _characters();
 }
 
 fn _basics_and_print_formatting() {
@@ -104,4 +105,12 @@ fn _booleans() {
 
     // ==, !=, <, <=, > and >= works just like c++
     // However, 1 == true will result in compile time error.
+}
+
+fn _characters() {
+    let a: char = 'a';
+    let b: char = 'b';
+    let c: char = '\u{261d}'; // rust char are stored as Unicode.
+
+    println!("a: {a}, b: {b}, c: {c}");
 }

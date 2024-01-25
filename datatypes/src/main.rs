@@ -55,6 +55,20 @@ fn main() {
 
     println!("bin8_b:{b:0b}, bin16_b:{b:016b}, octal_b: {b:0o}, hex_b: {b:0x}");
 
+    let base: u8 = 0b1111_1111u8;
+    let not_b: u8 = !b;
+    let and_b: u8 = base & b;
+    let or_b: u8 = base | b;
+    let xor_b: u8 = base ^ b;
+
+    println!("\n--------- Bitwise Operations ---------");
+    println!("{base:08b} & {b:08b}  = {and_b:08b}");
+    println!("{base:08b} | {b:08b}  = {or_b:08b}");
+    println!("{base:08b} ^ {b:08b}  = {xor_b:08b}");
+    println!("! {b:08b}           = {not_b:08b}");
+    println!("{b:08b} >> 4        = {0:08b}", b >> 4); // bit-shift right by 4
+    println!("{b:08b} << 4        = {0:08b}", b << 4); // bit-shift left  by 4
+
     // let mut overflow: u8 = 255;
     // overflow = overflow + 1; // this line will give us overflow.
     // println!("overflow: {}", overflow);

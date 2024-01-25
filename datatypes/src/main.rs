@@ -33,6 +33,18 @@ fn main() {
     let u_int: u8 = 254;
     println!("u: {}, i: {}", u_int, u_int as i8); // u: 254, i:-2
 
+    // print formatting
+    let id1: i32 = 110123359;
+    println!("------------------------------------------");
+    println!("|     Name     |        Student ID       |");
+    println!("------------------------------------------");
+    println!("| {:12} | {:23} |", "Matt", id1);
+    println!("| {:12} | {:023} |", "Edward", id1 + 1);
+    println!("------------------------------------------");
+
+    println!("a: {0}, b: {1}, a: {0}", 10, 20);
+    println!("x: {x}, y: {y}");
+
     // let mut overflow: u8 = 255;
     // overflow = overflow + 1; // this line will give us overflow.
     // println!("overflow: {}", overflow);

@@ -88,4 +88,20 @@ fn _binary_operations() {
     println!("{b:08b} << 4        = {0:08b}", b << 4); // bit-shift left  by 4
 }
 
-fn _booleans() {}
+fn _booleans() {
+    let a: bool = true;
+    let b: bool = false;
+
+    println!("a: {a}, b: {b}");
+    println!("a & b: {}", a & b & a & b); // evaluate all the operations
+    println!("a | b: {}", a | b);
+    // short-circuit enabled and: does not evaluate further if left expression is false.
+    println!("a && b: {}", a && b);
+    // short-circuit enabled or : does not evaluate further if left expression is true.
+    // ex. "a || panic!()" : will not invoke panic as a is true
+    println!("a || panic!(): {}", a || panic!("a is false!!!"));
+    println!("a ^ b: {}", a ^ b);
+
+    // ==, !=, <, <=, > and >= works just like c++
+    // However, 1 == true will result in compile time error.
+}

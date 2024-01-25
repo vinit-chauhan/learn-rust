@@ -1,6 +1,7 @@
 pub mod arrays_and_tuples;
 pub mod basics;
 pub mod challenge;
+pub mod functions;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -12,5 +13,7 @@ fn main() {
     // challenge::exec()
 
     // arrays_and_tuples::intro();
-    arrays_and_tuples::tuples();
+    // arrays_and_tuples::tuples();
+
+    functions::run()
 }

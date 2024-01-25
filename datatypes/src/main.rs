@@ -1,5 +1,6 @@
-mod basics;
-mod challenge;
+pub mod arrays_and_tuples;
+pub mod basics;
+pub mod challenge;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -9,4 +10,7 @@ fn main() {
     // basics::characters();
 
     // challenge::exec()
+
+    // arrays_and_tuples::intro();
+    arrays_and_tuples::tuples();
 }

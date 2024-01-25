@@ -1,9 +1,13 @@
+mod challenge;
+
 fn main() {
     // _basics_and_print_formatting();
     // _numbers_and_arithmetic();
     // _binary_operations();
     // _booleans();
-    _characters();
+    // _characters();
+
+    challenge::exec()
 }
 
 fn _basics_and_print_formatting() {

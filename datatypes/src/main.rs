@@ -34,6 +34,7 @@ fn main() {
     println!("u: {}, i: {}", u_int, u_int as i8); // u: 254, i:-2
 
     // print formatting
+    // format: {INDEX: [0 - Pad with 0][Length].[decimal precision]}
     let id1: i32 = 110123359;
     println!("------------------------------------------");
     println!("|     Name     |        Student ID       |");
@@ -43,7 +44,16 @@ fn main() {
     println!("------------------------------------------");
 
     println!("a: {0}, b: {1}, a: {0}", 10, 20);
-    println!("x: {x}, y: {y}");
+    println!("x: {x:10}, y: {y}");
+
+    // Storing binary representation of an Integer
+    // 0b(BIN Representation with optional _ to break it in smaller chunks)[Optional - TYPE to cast to]
+    let b: u8 = 0b1111_0000u8;
+
+    // You can't directly use negative bit rep. so will have to explicitly cast to i8
+    let _negative_b: i8 = 0b1111_0000u8 as i8;
+
+    println!("bin8_b:{b:0b}, bin16_b:{b:016b}, octal_b: {b:0o}, hex_b: {b:0x}");
 
     // let mut overflow: u8 = 255;
     // overflow = overflow + 1; // this line will give us overflow.

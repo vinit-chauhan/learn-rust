@@ -1,4 +1,10 @@
 pub fn exec() {
+    let temp: f64 = 23.0;
+    assert_eq!(celsius_to_fahrenheit(temp), 73.4);
+    println!("test passed")
+}
+
+fn _calculate_avg() {
     let a = 13;
     let b = 2.3;
     let c: f32 = 120.0;
@@ -15,4 +21,8 @@ pub fn exec() {
     assert_eq!(average, 45.1);
     assert_eq!(average_f32, 45.100002);
     println!("test passed!")
+}
+
+pub fn celsius_to_fahrenheit(temprature: f64) -> f64 {
+    temprature * 1.8 + 32.0
 }

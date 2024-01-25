@@ -1,4 +1,11 @@
 fn main() {
+    // _basics_and_print_formatting();
+    // _numbers_and_arithmetic();
+    // _binary_operations();
+    _booleans();
+}
+
+fn _basics_and_print_formatting() {
     let y = 11222.0; // immutable variable.
     let mut x = 100; // mutable variable
 
@@ -6,6 +13,28 @@ fn main() {
     println!("x: {}", x);
     x = 20; // gives error if mut is not used.
     println!("new x: {}", x);
+
+    // let mut overflow: u8 = 255;
+    // overflow = overflow + 1; // this line will give us overflow.
+    // println!("overflow: {}", overflow);
+
+    // Print Formatting
+    // format: {INDEX: [0 - Pad with 0][Length].[decimal precision]}
+    let id1: i32 = 110123359;
+    println!("------------------------------------------");
+    println!("|     Name     |        Student ID       |");
+    println!("------------------------------------------");
+    println!("| {:12} | {:23} |", "Matt", id1);
+    println!("| {:12} | {:023} |", "Edward", id1 + 1);
+    println!("------------------------------------------");
+
+    println!("a: {0}, b: {1}, a: {0}", 10, 20);
+    println!("x: {x:10}, y: {y}");
+}
+
+fn _numbers_and_arithmetic() {
+    let y = 11222.0; // immutable variable.
+    let x = 100; // mutable variable
 
     // Integers types
     let _ = 123; // default for integers is i32
@@ -32,20 +61,9 @@ fn main() {
 
     let u_int: u8 = 254;
     println!("u: {}, i: {}", u_int, u_int as i8); // u: 254, i:-2
+}
 
-    // print formatting
-    // format: {INDEX: [0 - Pad with 0][Length].[decimal precision]}
-    let id1: i32 = 110123359;
-    println!("------------------------------------------");
-    println!("|     Name     |        Student ID       |");
-    println!("------------------------------------------");
-    println!("| {:12} | {:23} |", "Matt", id1);
-    println!("| {:12} | {:023} |", "Edward", id1 + 1);
-    println!("------------------------------------------");
-
-    println!("a: {0}, b: {1}, a: {0}", 10, 20);
-    println!("x: {x:10}, y: {y}");
-
+fn _binary_operations() {
     // Storing binary representation of an Integer
     // 0b(BIN Representation with optional _ to break it in smaller chunks)[Optional - TYPE to cast to]
     let b: u8 = 0b1111_0000u8;
@@ -68,8 +86,6 @@ fn main() {
     println!("! {b:08b}           = {not_b:08b}");
     println!("{b:08b} >> 4        = {0:08b}", b >> 4); // bit-shift right by 4
     println!("{b:08b} << 4        = {0:08b}", b << 4); // bit-shift left  by 4
-
-    // let mut overflow: u8 = 255;
-    // overflow = overflow + 1; // this line will give us overflow.
-    // println!("overflow: {}", overflow);
 }
+
+fn _booleans() {}

@@ -1,4 +1,8 @@
 pub fn exec() {
+    challenge_3();
+}
+
+pub fn challenge_2() {
     let temp: f64 = 23.0;
     assert_eq!(celsius_to_fahrenheit(temp), 73.4);
     println!("test passed")
@@ -23,6 +27,27 @@ fn _calculate_avg() {
     println!("test passed!")
 }
 
-pub fn celsius_to_fahrenheit(temprature: f64) -> f64 {
-    temprature * 1.8 + 32.0
+pub fn celsius_to_fahrenheit(temperature: f64) -> f64 {
+    temperature * 1.8 + 32.0
+}
+
+pub fn challenge_3() {
+    let numbers: [i32; 14] = [1, 9, -2, 0, 23, 20, -7, 13, 37, 20, 56, -18, 20, 3];
+    let mut max: i32 = numbers[0];
+    let mut min: i32 = numbers[0];
+    let mut mean: f64 = 0.0;
+
+    for num in numbers {
+        max = if num > max { num } else { max };
+        min = if num < min { num } else { min };
+        mean += num as f64;
+    }
+
+    mean /= numbers.len() as f64;
+
+    assert_eq!(max, 56);
+    assert_eq!(min, -18);
+    assert_eq!(mean, 12.5);
+
+    println!("test passed!");
 }

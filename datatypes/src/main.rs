@@ -11,12 +11,12 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    // challenge::exec()
+    challenge::exec()
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
 
     // functions::run()
 
-    loops::exec();
+    // loops::exec();
 }

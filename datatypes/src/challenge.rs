@@ -1,5 +1,7 @@
+use std::ops::Index;
+
 pub fn exec() {
-    challenge_3();
+    challenge_4();
 }
 
 pub fn challenge_2() {
@@ -49,5 +51,35 @@ pub fn challenge_3() {
     assert_eq!(min, -18);
     assert_eq!(mean, 12.5);
 
+    println!("test passed!");
+}
+
+pub fn challenge_4() {
+    fn trim_spaces(s: &str) -> &str {
+        let mut front: usize = 0;
+        let mut back: usize = s.len();
+
+        for c in s.chars() {
+            if c == ' ' {
+                front += 1;
+            } else {
+                break;
+            }
+        }
+
+        for c in s.chars().rev() {
+            if c == ' ' {
+                back -= 1;
+            } else {
+                break;
+            }
+        }
+
+        &s[front..back]
+    }
+
+    let string: String = String::from("  Hello World.");
+
+    assert_eq!(trim_spaces(&string), "Hello World.");
     println!("test passed!");
 }

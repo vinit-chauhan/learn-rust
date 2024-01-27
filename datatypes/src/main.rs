@@ -15,7 +15,7 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    // challenge::exec()
+    challenge::exec()
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
@@ -30,5 +30,5 @@ fn main() {
 
     // borrow::exec();
 
-    slices::exec();
+    // slices::exec();
 }

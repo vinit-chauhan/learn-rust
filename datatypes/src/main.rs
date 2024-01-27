@@ -3,6 +3,7 @@ pub mod basics;
 pub mod challenge;
 pub mod functions;
 pub mod loops;
+pub mod ownership;
 pub mod strings;
 
 fn main() {
@@ -21,5 +22,7 @@ fn main() {
 
     // loops::exec();
 
-    strings::exec();
+    // strings::exec();
+
+    ownership::exec();
 }

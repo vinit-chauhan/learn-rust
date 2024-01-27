@@ -5,6 +5,7 @@ pub mod challenge;
 pub mod functions;
 pub mod loops;
 pub mod ownership;
+pub mod slices;
 pub mod strings;
 
 fn main() {
@@ -27,5 +28,7 @@ fn main() {
 
     // ownership::exec();
 
-    borrow::exec();
+    // borrow::exec();
+
+    slices::exec();
 }

@@ -1,5 +1,3 @@
-use std::ops::Index;
-
 pub fn exec() {
     challenge_4();
 }

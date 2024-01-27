@@ -40,7 +40,10 @@ fn _use_case_1() {
      * With intent to make change to the value
      *
      */
-    let len = _func_borrow_mut(&mut var_s);
+    let ref1 = &mut var_s;
+    // You can't create more than 1 mutable reference of a variable in a given scope.
+    // let ref2 = &mut var_s;
+    let len = _func_borrow_mut(ref1);
     println!("var_s: String = {var_s} with size {len} chars");
 }
 

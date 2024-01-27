@@ -3,6 +3,7 @@ pub mod basics;
 pub mod challenge;
 pub mod functions;
 pub mod loops;
+pub mod strings;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -11,7 +12,7 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    challenge::exec()
+    // challenge::exec()
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
@@ -19,4 +20,6 @@ fn main() {
     // functions::run()
 
     // loops::exec();
+
+    strings::exec();
 }

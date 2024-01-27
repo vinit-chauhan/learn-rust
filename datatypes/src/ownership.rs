@@ -11,7 +11,7 @@ pub fn exec() {
 
     */
 
-    _use_case_7();
+    _use_case_6();
 }
 
 fn _use_case_1() {

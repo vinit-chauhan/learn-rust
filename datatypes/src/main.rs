@@ -1,5 +1,6 @@
 pub mod arrays_and_tuples;
 pub mod basics;
+pub mod borrow;
 pub mod challenge;
 pub mod functions;
 pub mod loops;
@@ -24,5 +25,7 @@ fn main() {
 
     // strings::exec();
 
-    ownership::exec();
+    // ownership::exec();
+
+    borrow::exec();
 }

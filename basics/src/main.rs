@@ -1,3 +1,4 @@
+pub mod args;
 pub mod arrays_and_tuples;
 pub mod basics;
 pub mod borrow;
@@ -15,7 +16,7 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    challenge::exec()
+    // challenge::exec()
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
@@ -31,4 +32,6 @@ fn main() {
     // borrow::exec();
 
     // slices::exec();
+
+    args::exec()
 }

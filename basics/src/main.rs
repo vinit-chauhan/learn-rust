@@ -3,6 +3,7 @@ pub mod arrays_and_tuples;
 pub mod basics;
 pub mod borrow;
 pub mod challenge;
+pub mod files;
 pub mod functions;
 pub mod loops;
 pub mod ownership;
@@ -33,5 +34,7 @@ fn main() {
 
     // slices::exec();
 
-    args::exec()
+    // args::exec()
+
+    files::exec();
 }

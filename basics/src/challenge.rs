@@ -4,7 +4,7 @@ use std::fs::File;
 use std::io::prelude::*;
 
 pub fn exec() {
-    challenge_5();
+    challenge_6();
 }
 
 pub fn challenge_2() {
@@ -107,4 +107,35 @@ pub fn challenge_5() {
         }
     }
     println!("{} {}", name.red(), "is not Invited.".red());
+}
+
+pub fn challenge_6() {
+    struct Rectangle {
+        width: f64,
+        height: f64,
+    }
+
+    impl Rectangle {
+        fn area(&self) -> f64 {
+            self.width * self.height
+        }
+
+        fn scale(&mut self, factor: f64) {
+            self.width *= factor;
+            self.height *= factor;
+        }
+
+        fn new(height: f64, width: f64) -> Rectangle {
+            Rectangle {
+                height: height,
+                width: width,
+            }
+        }
+    }
+
+    let mut rect: Rectangle = Rectangle::new(1.2, 3.4);
+    assert_eq!(rect.area(), 4.08);
+    rect.scale(0.5);
+    assert_eq!(rect.area(), 1.02);
+    println!("{}", "test passed".green())
 }

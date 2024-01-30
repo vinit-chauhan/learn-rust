@@ -1,5 +1,10 @@
+use colored::Colorize;
+use std::env;
+use std::fs::File;
+use std::io::prelude::*;
+
 pub fn exec() {
-    challenge_4();
+    challenge_5();
 }
 
 pub fn challenge_2() {
@@ -80,4 +85,26 @@ pub fn challenge_4() {
 
     assert_eq!(trim_spaces(&string), "Hello World.");
     println!("test passed!");
+}
+
+pub fn challenge_5() {
+    if env::args().len() != 3 {
+        panic!("Invalid Argument count")
+    }
+
+    let file_path: String = env::args().nth(1).unwrap();
+    let name: String = env::args().nth(2).unwrap();
+
+    let mut fd: File = File::open(file_path).expect("Unable to open file.");
+    let mut buff: String = String::new();
+
+    let _ = fd.read_to_string(&mut buff).expect("Unable to read file.");
+
+    for line in buff.lines() {
+        if name == line {
+            println!("{} {}", name.green(), "is Invited.".green());
+            return;
+        }
+    }
+    println!("{} {}", name.red(), "is not Invited.".red());
 }

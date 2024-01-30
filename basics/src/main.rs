@@ -9,6 +9,7 @@ pub mod loops;
 pub mod ownership;
 pub mod slices;
 pub mod strings;
+pub mod structs;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -17,7 +18,7 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    challenge::exec()
+    // challenge::exec()
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
@@ -37,4 +38,6 @@ fn main() {
     // args::exec()
 
     // files::exec();
+
+    structs::exec()
 }

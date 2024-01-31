@@ -5,6 +5,7 @@ pub mod borrow;
 pub mod challenge;
 pub mod files;
 pub mod functions;
+pub mod generics;
 pub mod loops;
 pub mod ownership;
 pub mod slices;
@@ -18,12 +19,12 @@ fn main() {
     // basics::booleans();
     // basics::characters();
 
-    challenge::exec()
+    // challenge::exec();
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
 
-    // functions::run()
+    // functions::run();
 
     // loops::exec();
 
@@ -35,9 +36,11 @@ fn main() {
 
     // slices::exec();
 
-    // args::exec()
+    // args::exec();
 
     // files::exec();
 
     // structs::exec();
+
+    generics::exec();
 }

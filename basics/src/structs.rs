@@ -8,6 +8,36 @@
 
 */
 
+/*
+Memory Map:
+
+Stack: 40 bytes
+    Here, align = 8, which means memory will grow my 8 bytes,
+        - 8-bit types   e.g., u8, i8             :: align -> 1-byte
+        - 16-bit types  e.g., u16, i16           :: align -> 2-byte
+        - 32-bit types  e.g., u32, i32, f32      :: align -> 4-byte
+        - 64-bit types  e.g., u64, i64, f64      :: align -> 8-byte
+    Therefore, to allocate 33 bytes, struct will reserve 40 bytes.
+
+    -----------------------------------------
+    | name:  : 24 bytes                     |
+    |   ---------------                     |
+    |   | ptr: 0x1200 | : 8 bytes           |
+    |   | len: 4      | : 8 bytes           |
+    |   | cap: 4      | : 8 bytes           |
+    |   ---------------                     |
+    |                                       |
+    | crew_size: u8     : 1 byte            |
+    | propellent: f64   : 8 bytes           |
+    -----------------------------------------
+Heap:
+    0x1200-0x1204 (String):
+    -------------------------
+    | 'H' | 'i' | 'i' | '!' |
+    -------------------------
+
+*/
+
 // derive(Debug) : Add ability to print in debug mode.
 // derive(Clone) : Add ability to clone properties.
 #[derive(Debug, Clone)]

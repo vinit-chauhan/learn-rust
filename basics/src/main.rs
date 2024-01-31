@@ -2,6 +2,7 @@ pub mod args;
 pub mod arrays_and_tuples;
 pub mod basics;
 pub mod borrow;
+pub mod box_datatype;
 pub mod challenge;
 pub mod files;
 pub mod functions;
@@ -42,5 +43,7 @@ fn main() {
 
     // structs::exec();
 
-    generics::exec();
+    // generics::exec();
+
+    box_datatype::exec();
 }

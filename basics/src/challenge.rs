@@ -139,3 +139,23 @@ pub fn challenge_6() {
     assert_eq!(rect.area(), 1.02);
     println!("{}", "test passed".green())
 }
+
+fn sum_boxes<T: std::ops::Add<Output = T>>(item1: Box<T>, item2: Box<T>) -> Box<T> {
+    Box::new(*item1 + *item2)
+}
+
+pub fn challenge_7() {
+    let box1: Box<i32> = Box::new(1);
+    let box2: Box<i32> = Box::new(2);
+    assert_eq!(*sum_boxes(box1, box2), 3);
+
+    let box1: Box<f64> = Box::new(12_f64);
+    let box2: Box<f64> = Box::new(2_f64);
+    assert_eq!(*sum_boxes(box1, box2), 14_f64);
+
+    let box1: Box<i8> = Box::new(1);
+    let box2: Box<i8> = Box::new(2);
+    assert_eq!(*sum_boxes(box1, box2), 3_i8);
+
+    println!("{}", "Test Passed!".green());
+}

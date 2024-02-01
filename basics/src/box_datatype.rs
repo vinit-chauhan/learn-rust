@@ -42,6 +42,7 @@ Heap: 40 + 4 byte
 
 use std::mem;
 
+#[allow(dead_code)]
 struct Shuttle {
     // takes 40 bytes on stack
     name: String,

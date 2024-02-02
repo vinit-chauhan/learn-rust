@@ -12,6 +12,7 @@ pub mod ownership;
 pub mod slices;
 pub mod strings;
 pub mod structs;
+pub mod traits;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -19,8 +20,6 @@ fn main() {
     // basics::binary_operations();
     // basics::booleans();
     // basics::characters();
-
-    challenge::exec();
 
     // arrays_and_tuples::intro();
     // arrays_and_tuples::tuples();
@@ -46,4 +45,8 @@ fn main() {
     // generics::exec();
 
     // box_datatype::exec();
+
+    traits::exec();
+
+    // challenge::exec();
 }

@@ -28,8 +28,18 @@ impl SpaceStation {
     }
 }
 
+struct SomeStruct {}
+
+impl Description for SomeStruct {}
+
 trait Description {
-    fn desc(&self) -> String;
+    // with no default implementation
+    // fn desc(&self) -> String;
+
+    // with default implementation
+    fn desc(&self) -> String {
+        String::from("This is the default description.")
+    }
 }
 
 impl Description for Satellite {
@@ -54,4 +64,7 @@ pub fn exec() {
 
     println!("s1: {}", s1.desc());
     println!("s1: {}", ss1.desc());
+
+    let temp = SomeStruct {};
+    println!("default: {}", temp.desc());
 }

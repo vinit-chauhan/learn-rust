@@ -7,6 +7,7 @@ pub mod challenge;
 pub mod files;
 pub mod functions;
 pub mod generics;
+pub mod lifetime;
 pub mod loops;
 pub mod ownership;
 pub mod slices;
@@ -48,5 +49,7 @@ fn main() {
 
     // traits::exec()
 
-    challenge::exec();
+    lifetime::exec();
+
+    // challenge::exec();
 }

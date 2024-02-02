@@ -1,10 +1,11 @@
 use colored::Colorize;
 use std::env;
+use std::fmt;
 use std::fs::File;
 use std::io::prelude::*;
 
 pub fn exec() {
-    challenge_6();
+    challenge_8();
 }
 
 pub fn challenge_2() {
@@ -158,4 +159,24 @@ pub fn challenge_7() {
     assert_eq!(*sum_boxes(box1, box2), 3_i8);
 
     println!("{}", "Test Passed!".green());
+}
+
+struct Satellite {
+    name: String,
+    velocity: f64,
+}
+
+impl fmt::Display for Satellite {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{} is flying at {} miles/hr", self.name, self.velocity)
+    }
+}
+
+pub fn challenge_8() {
+    let hubble: Satellite = Satellite {
+        name: String::from("Hubble Space Telescope"),
+        velocity: 4.72,
+    };
+
+    println!("Satellite: {}", hubble)
 }

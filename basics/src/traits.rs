@@ -109,6 +109,9 @@ pub fn exec() {
     print_type(123_i32);
     // print_type(s1); // error: Display trait not implemented.
 
+    get_displayable();
+
+    cmp_type(1.1, 2.2);
     cmp_type2(1.1, 2.2);
     cmp_type2(1.0_f32, 2.2);
 }

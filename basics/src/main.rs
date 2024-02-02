@@ -46,7 +46,7 @@ fn main() {
 
     // box_datatype::exec();
 
-    traits::exec()
+    // traits::exec()
 
-    // challenge::exec();
+    challenge::exec();
 }

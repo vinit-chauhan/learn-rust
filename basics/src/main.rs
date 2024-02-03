@@ -5,6 +5,7 @@ pub mod borrow;
 pub mod box_datatype;
 pub mod challenge;
 pub mod enums;
+pub mod errors;
 pub mod files;
 pub mod functions;
 pub mod generics;
@@ -54,5 +55,7 @@ fn main() {
 
     // enums::exec();
 
-    challenge::exec();
+    errors::exec();
+
+    // challenge::exec();
 }

@@ -14,14 +14,13 @@ pub fn run() {
             }
         }
 
-        let guess: i8;
-        match buff.trim().parse::<i8>() {
-            Ok(num) => guess = num,
+        let guess: i8 = match buff.trim().parse::<i8>() {
+            Ok(num) => num,
             Err(_) => {
                 println!("Error parsing the input to Int.");
                 continue;
             }
-        }
+        };
 
         if guess == answer {
             println!("Congratulations!! You Won!!");

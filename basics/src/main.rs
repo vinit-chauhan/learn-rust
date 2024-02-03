@@ -4,6 +4,7 @@ pub mod basics;
 pub mod borrow;
 pub mod box_datatype;
 pub mod challenge;
+pub mod enums;
 pub mod files;
 pub mod functions;
 pub mod generics;
@@ -49,7 +50,9 @@ fn main() {
 
     // traits::exec()
 
-    lifetime::exec();
+    // lifetime::exec();
+
+    enums::exec();
 
     // challenge::exec();
 }

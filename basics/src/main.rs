@@ -55,7 +55,7 @@ fn main() {
 
     // enums::exec();
 
-    errors::exec();
+    // errors::exec();
 
-    // challenge::exec();
+    challenge::exec();
 }

@@ -18,3 +18,4 @@
 16. enums.rs
 17. errors.rs
 18. vectors.rs
+19. hashmaps.rs

@@ -9,6 +9,7 @@ pub mod errors;
 pub mod files;
 pub mod functions;
 pub mod generics;
+pub mod hashmaps;
 pub mod lifetime;
 pub mod loops;
 pub mod ownership;
@@ -58,7 +59,9 @@ fn main() {
 
     // errors::exec();
 
-    vectors::exec();
+    // vectors::exec();
+
+    hashmaps::exec();
 
     // challenge::exec();
 }

@@ -16,6 +16,7 @@ pub mod slices;
 pub mod strings;
 pub mod structs;
 pub mod traits;
+pub mod vectors;
 
 fn main() {
     // basics::basics_and_print_formatting();
@@ -57,5 +58,7 @@ fn main() {
 
     // errors::exec();
 
-    challenge::exec();
+    vectors::exec();
+
+    // challenge::exec();
 }

@@ -28,16 +28,14 @@ pub fn exec() {
 }
 
 pub fn example_1() {
-    let my_shape: Shape = Shape::Circle(2.3);
-    let my_shape: Shape = Shape::Triangle(1.2, 1.1, 2.3);
     let my_shape: Shape = Shape::Rectangle(1.2, 2.3);
 
     println!("my_shape: {my_shape:?}");
 
     match my_shape {
-        Shape::Circle(r) => println!("This is a circle"),
-        Shape::Rectangle(h, w) => println!("This is a Rectangle"),
-        Shape::Triangle(l1, l2, l3) => println!("This is a Triangle"),
+        Shape::Circle(_) => println!("This is a circle"),
+        Shape::Rectangle(_, _) => println!("This is a Rectangle"),
+        Shape::Triangle(_, _, _) => println!("This is a Triangle"),
     }
 }
 

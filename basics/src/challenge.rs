@@ -5,7 +5,7 @@ use std::fs::File;
 use std::io::prelude::*;
 
 pub fn exec() {
-    challenge_8();
+    challenge_9();
 }
 
 pub fn challenge_2() {
@@ -179,4 +179,31 @@ pub fn challenge_8() {
     };
 
     println!("Satellite: {}", hubble)
+}
+
+pub fn challenge_9() {
+    enum Location {
+        Unknown,
+        Anonymous,
+        Known(f64, f64),
+    }
+
+    impl Location {
+        fn display(&self) {
+            match *self {
+                Location::Unknown => println!("Unknown location."),
+                Location::Anonymous => println!("Anonymous location."),
+                Location::Known(lat, lon) => println!("location is: ({}, {})", lat, lon),
+            }
+        }
+    }
+
+    let mut address: Location = Location::Unknown;
+    address.display();
+
+    address = Location::Anonymous;
+    address.display();
+
+    address = Location::Known(3.12312, 3.12312);
+    address.display();
 }

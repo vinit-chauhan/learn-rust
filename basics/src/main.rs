@@ -52,7 +52,7 @@ fn main() {
 
     // lifetime::exec();
 
-    enums::exec();
+    // enums::exec();
 
-    // challenge::exec();
+    challenge::exec();
 }

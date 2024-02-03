@@ -1,6 +1,7 @@
 use colored::Colorize;
 use std::env;
 use std::fmt;
+use std::fmt::Display;
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -198,12 +199,22 @@ pub fn challenge_9() {
         }
     }
 
+    impl Display for Location {
+        fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+            match *self {
+                Location::Unknown => write!(f, "Unknown location."),
+                Location::Anonymous => write!(f, "Anonymous location."),
+                Location::Known(lat, lon) => write!(f, "location is: ({}, {})", lat, lon),
+            }
+        }
+    }
+
     let mut address: Location = Location::Unknown;
     address.display();
 
     address = Location::Anonymous;
-    address.display();
+    println!("{address}");
 
     address = Location::Known(3.12312, 3.12312);
-    address.display();
+    println!("{address}");
 }

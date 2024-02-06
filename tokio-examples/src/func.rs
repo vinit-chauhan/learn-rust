@@ -6,3 +6,7 @@ pub async fn exec() {
     }
     println!("whole task done");
 }
+
+pub async fn shout(msg: &str) -> String {
+    msg.to_uppercase()
+}

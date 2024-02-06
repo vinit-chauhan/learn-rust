@@ -1,13 +1,32 @@
-use func::shout;
-use tokio::task::JoinHandle;
+use std::thread;
+use tokio::time::{sleep, Duration};
 
-mod func;
+fn blocking_call() -> String {
+    thread::sleep(Duration::from_secs(5));
+
+    "Done".to_string()
+}
+
+async fn async_call(id: i32) {
+    sleep(Duration::from_secs(1)).await;
+    println!("Async call ID: {id}")
+}
 
 #[tokio::main]
 async fn main() {
-    let join_handler: JoinHandle<String> = tokio::spawn(shout("hey!!"));
+    let blocking_call_handle = tokio::task::spawn_blocking(blocking_call);
 
-    let val = join_handler.await.unwrap();
+    let mut async_handles = Vec::new();
 
-    dbg!(val);
+    for id in 0..=10 {
+        async_handles.push(tokio::spawn(async_call(id)));
+    }
+
+    for handle in async_handles {
+        handle.await.unwrap();
+    }
+
+    let result = blocking_call_handle.await.unwrap();
+
+    println!("Blocking call: {result}");
 }

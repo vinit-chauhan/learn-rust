@@ -1,32 +1,8 @@
-use std::thread;
-use tokio::time::{sleep, Duration};
+pub mod blocking_call;
+pub mod func;
+pub mod mutex;
 
-fn blocking_call() -> String {
-    thread::sleep(Duration::from_secs(5));
-
-    "Done".to_string()
-}
-
-async fn async_call(id: i32) {
-    sleep(Duration::from_secs(1)).await;
-    println!("Async call ID: {id}")
-}
-
-#[tokio::main]
-async fn main() {
-    let blocking_call_handle = tokio::task::spawn_blocking(blocking_call);
-
-    let mut async_handles = Vec::new();
-
-    for id in 0..=10 {
-        async_handles.push(tokio::spawn(async_call(id)));
-    }
-
-    for handle in async_handles {
-        handle.await.unwrap();
-    }
-
-    let result = blocking_call_handle.await.unwrap();
-
-    println!("Blocking call: {result}");
+fn main() {
+    // blocking_call::exec();
+    mutex::exec();
 }

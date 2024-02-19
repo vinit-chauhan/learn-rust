@@ -6,11 +6,11 @@ pub mod mutex;
 pub mod notify;
 pub mod semaphore;
 
-pub use crate::channel::mp_sc_channel;
-pub use crate::channel::one_shot_channel;
-pub use crate::channel::watch_channel;
+pub use crate::channel::mpsc;
+pub use crate::channel::one_shot;
 
-use crate::channel::watch_channel::exec as watch_channel_exec;
+#[allow(unused_imports)]
+use crate::channel::{broadcast::exec as broadcast_exec, watch::exec as watch_channel_exec};
 
 fn main() {
     // blocking_call::exec();
@@ -21,6 +21,6 @@ fn main() {
 
     // one_shot_channel::exec();
     // mp_sc_channel::exec();
-    // watch_channel::exec();
-    watch_channel_exec();
+    // watch_exec();
+    broadcast_exec();
 }

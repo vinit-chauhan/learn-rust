@@ -1,3 +1,4 @@
-pub mod mp_sc_channel;
-pub mod one_shot_channel;
-pub mod watch_channel;
+pub mod broadcast;
+pub mod mpsc;
+pub mod one_shot;
+pub mod watch;
